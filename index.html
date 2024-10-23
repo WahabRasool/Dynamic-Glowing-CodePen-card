@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Dynamic Glowing codepen card</title>
+</head>
+<body>
+    <div class="container">
+        <svg width="0" height="0" style="position:absolute;z-index:-1;">
+          <filter id="natural-shadow-filter" x="-20%" y="-20%" width="140%" height="140%">
+            <feOffset in="SourceGraphic" dx="3" dy="3" />
+            <feGaussianBlur stdDeviation="12" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </svg>
+        <div class="border"></div>
+        <div class="card-details">
+          <div class="card-header">
+            <div class="card-logo"><img src="https://blog.codepen.io/wp-content/uploads/2022/01/codepen-wordmark-display-inside-white@10x.png" width="100%"></div>
+            <div class="card-holder">Max Mustermann</div>
+          </div>
+          <div class="card-info">
+            <div class="card-tel">&#9990; +00 000 000 000</div>
+            <div class="card-email">&#9993; name@example.com</div>
+            <div class="card-web">www.example.com</div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>
